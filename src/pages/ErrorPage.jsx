@@ -8,6 +8,9 @@ export const ErrorPage = () => {
     // navigate("/");
     navigate(-1);
   };
+  const handleGoHome = () => {
+    navigate("/")
+  };
 
   if (error.status === 404) {
     return (
@@ -23,15 +26,14 @@ export const ErrorPage = () => {
             <p className="p-a">
               . The page you were looking for could not be found
             </p>
-            <p className="p-b">... Back to previous page</p>
+            <p className="p-b">... Back to previous page or Home page</p>
           </div>
         </div>
         {/* <NavLink to="/" className="btn">
           Go Back To HomePage
         </NavLink> */}
-        <button className="btn" onClick={handleGoBack}>
-          Go Back
-        </button>
+        <button className="btn" onClick={handleGoBack}>Go Back</button>
+        <button className="btn" onClick={handleGoHome}> Back To Home </button>
       </section>
     );
   }

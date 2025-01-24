@@ -1,7 +1,7 @@
 export const GetData = async() => {
     try {
        const response = await fetch(
-            "http://www.omdbapi.com/?i=tt3896198&apikey=c421e41f"
+            "https://www.omdbapi.com/?i=tt3896198&apikey=8c3c945a"
         );
         const data = response.json();
         return data;
