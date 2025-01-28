@@ -1,12 +1,12 @@
-export const GetData = async() => {
+export const GetData = async () => {
     try {
-       const response = await fetch(
-            "https://www.omdbapi.com/?i=tt3896198&apikey=8c3c945a"
+        const response = await fetch(
+            `https://www.omdbapi.com/?i=tt3896198&apikey=${import.meta.env.VITE_API_kEY
+            }=titanic&page=1`
         );
         const data = response.json();
         return data;
-    } catch(error) {
+    } catch (error) {
         console.log(error);
-        
     }
 };
